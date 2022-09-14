@@ -79,12 +79,12 @@ def get_birthday_left():
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
 def get_words():
-  url = "https://v2.alapi.cn/api/mingyan?typeid=38&token=LwExDtUWhF3rH5ib"
-  res = requests.get(url).json
+  url = "https://v2.alapi.cn/api/mingyan?typeid=7&token=LwExDtUWhF3rH5ib"
+  res = requests.get(url).json()
   if res is None:
     return None
-  words = res['data']['content']
-  return words
+  return res['data']['content']
+ 
 
 def format_temperature(temperature):
   return math.floor(temperature)
