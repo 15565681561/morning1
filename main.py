@@ -46,7 +46,7 @@ def get_weather():
 
 # 获取情话
 def get_text():
-  url = "https://api.vvhan.com/api/en?type=json"
+  url = "https://api.vvhan.com/api/en"
   res = requests.get(url).json()
   if res is None:
     return None
