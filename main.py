@@ -46,11 +46,11 @@ def get_weather():
 
 # 获取情话
 def get_text():
-  url = "https://api.vvhan.com/api/en?type=json"
+  url = "https://api.vvhan.com/api/ian?type=json"
   res = requests.get(url).json()
   if res is None:
     return None
-  text = res['data']['zh']
+  text = res['data']['vhan']
   return text
 
 # 获取当前日期为星期几
