@@ -47,7 +47,7 @@ def get_weather():
 # 获取情话
 def get_text():
   url = "https://api.vvhan.com/api/en?type=json"
-  res = requests.get(url)
+  res = requests.get(url).json()
   if res is None:
     return None
   text = res['data']['zh']
@@ -80,7 +80,7 @@ def get_birthday_left():
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
 def get_words():
   url = "https://api.vvhan.com/api/en?type=json"
-  res = requests.get(url)
+  res = requests.get(url).json
   if res is None:
     return None
   words = res['data']['en']
